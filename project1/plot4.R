@@ -1,5 +1,5 @@
 plot4 <- function(){
-    setwd("~/r/Coursera/Coursera-ExploratoryDataAnalysis")
+    setwd("~/r/Coursera/Coursera-ExploratoryDataAnalysis/project1")
     library(datasets)
     
     # read in only the data for 2007-02-01 through 2007-02-02

@@ -1,5 +1,5 @@
-plot1 <- function(){
-    setwd("~/r/Coursera/Coursera-ExploratoryDataAnalysis")
+plot3 <- function(){
+    setwd("~/r/Coursera/Coursera-ExploratoryDataAnalysis/project1")
     library(datasets)
     
     # read in only the data for 2007-02-01 through 2007-02-02
@@ -8,7 +8,7 @@ plot1 <- function(){
                      , na.strings="?"
                      , skip=66637
                      , nrows=2880
-                     )
+    )
     
     # assign useful names
     names(df) <- c("rawDate"
@@ -25,14 +25,26 @@ plot1 <- function(){
     df$datetime <- strptime(paste(df$rawDate, df$rawTime), format="%d/%m/%Y %H:%M:%S")
     
     # initiate png device
-    png(file="plot1.png")
+    png(file="plot3.png")
     
     # generate plot
-    hist(df$Global_active_power
-         ,col="red"
-         ,xlab="Global Active Power (kilowatts)"
-         ,main="Global Active Power"
+    with(df, plot(datetime, Sub_metering_1
+                  ,type="l"
+                  ,fg="black"
+                  ,col="black"
+                  ,xlab=""
+                  ,ylab="Energy sub metering"
+                  )
          )
+    with(df, points(datetime, Sub_metering_2
+                  ,type="l"
+                  ,col="red")
+         )
+    with(df, points(datetime, Sub_metering_3
+                    ,type="l"
+                    ,col="blue")
+    )
+    legend("topright", lty=1, col = c("black", "red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
     
     # shut down png device 
     dev.off()

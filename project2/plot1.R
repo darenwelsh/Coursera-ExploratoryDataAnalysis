@@ -21,7 +21,7 @@ plot1 <- function(){
     plot(TotalEmissionsByYear
         ,xlab="Year"
         ,ylab="Total Emissions"
-        ,main="Sum of All Emissions By Year"
+        ,main="U.S. Emissions"
     )
     
     # add a line

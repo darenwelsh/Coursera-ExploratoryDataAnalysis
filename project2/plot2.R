@@ -15,7 +15,6 @@ plot2 <- function(){
     NEIsubset <- subset(NEIsubset, year %in% c("1999","2008"))
     NEIsubset$year <- as.factor(NEIsubset$year)
     
-    #TotalEmissionsByYear <- tapply(NEIsubset$Emissions,NEIsubset$year,sum)#,simplify=FALSE)
     TotalEmissionsByYear <- ddply(NEIsubset,.(year),summarize,TotalEmissions=sum(Emissions))
     
     # initiate png device
@@ -25,7 +24,7 @@ plot2 <- function(){
     plot(TotalEmissionsByYear
          ,xlab="Year"
          ,ylab="Total Emissions"
-         ,main="Total Emissions: Baltimore City, Maryland"
+         ,main="Emissions in Baltimore City, Maryland"
     )
     
     # add a line

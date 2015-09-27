@@ -6,8 +6,6 @@ plot3 <- function(){
     # Use the ggplot2 plotting system to make a plot answer this question.
     setwd("/Users/lwelsh/r/Coursera/Coursera-ExploratoryDataAnalysis/project2")
     library(ggplot2)
-    #library(reshape2)
-    #library(plyr)
     
     NEI <- readRDS("summarySCC_PM25.rds")
     SCC <- readRDS("Source_Classification_Code.rds")

@@ -2,7 +2,6 @@ plot4 <- function(){
     # Across the United States, how have emissions from coal combustion-related 
     # sources changed from 1999–2008?
     setwd("/Users/lwelsh/r/Coursera/Coursera-ExploratoryDataAnalysis/project2")
-    #library(ggplot2)
     library(reshape2)
     library(plyr)
     

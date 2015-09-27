@@ -2,4 +2,5 @@ project1/household_power_consumption.txt
 .DS_Store
 .Rhistory
 *.rds
+reference/*
 
